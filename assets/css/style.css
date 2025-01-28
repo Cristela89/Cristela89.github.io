@@ -23,7 +23,7 @@ header.header img {
 /* Estilo para los botones de navegación */
 .nav-buttons {
     position: absolute;
-    top: 15px; /* Espacio desde el borde superior de la imagen */
+    top: 45px; /* Espacio desde el borde superior de la imagen */
     left: 160px; /* Espacio desde el borde izquierdo de la imagen */
     display: flex;
     gap: 60px; /* Espacio entre los botones */
@@ -35,7 +35,7 @@ header.header img {
     color: #303030; /* Cambié el color del texto a #303030 */
     font-family: 'MuktaVaani-ExtraBold', sans-serif; /* Aplica la fuente MuktaVaani-ExtraBold */
     font-size: 21px;
-    font-weight: 700; /* Cambié el peso a 700 */
+    font-weight: 600; /* Cambié el peso a 700 */
     cursor: pointer;
     transition: color 0.3s ease;
 }
