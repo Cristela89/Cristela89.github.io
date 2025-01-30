@@ -13,9 +13,10 @@ body {
 header.header {
     width: 100%; /* Ocupa todo el ancho del viewport */
     position: relative;
+    z-index: 2; /* Asegura que el header y el navbar estén por encima */
 }
 
-header.header img {
+header.header img.fondo-header {
     width: 100%; /* Escala la imagen al ancho del viewport */
     height: auto; /* Mantiene la proporción original de la imagen */
 }
@@ -43,4 +44,15 @@ header.header img {
 /* Efecto cuando el cursor pasa por encima del botón */
 .nav-buttons button:hover {
     color: #B55FFF; /* Puedes cambiar el color del hover */
+}
+
+/* Estilos para la imagen MY CV.png */
+.my-cv {
+    display: block;
+    width: 100%; /* Hace que la imagen MY CV tenga el mismo ancho que fondo_header.png */
+    height: auto; /* Conserva la altura original */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Asegura que esté debajo del header y navbar */
 }
