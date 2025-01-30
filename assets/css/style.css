@@ -11,39 +11,49 @@ body {
 }
 
 header.header {
-    width: 100%; /* Ocupa todo el ancho del viewport */
+    width: 100%;
     position: relative;
 }
 
 /* Ajustar el ancho de fondo_header.png al mismo ancho de MY CV.png */
 header.header .fondo-header {
-    width: 100%; /* Ahora ocupa todo el ancho, igual que MY CV.png */
-    height: auto; /* Mantiene la proporción original de la imagen */
+    width: 100%;
+    height: auto;
 }
 
 /* Estilo para la imagen MY CV.png */
 .my-cv {
-    width: 100%; /* Mantiene el ancho completo */
-    height: auto; /* Mantiene la altura original */
+    width: 100%;
+    height: auto;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1; /* Coloca MY CV.png debajo del navbar y la imagen de fondo */
+    z-index: -1; /* MY CV.png está detrás del navbar */
+}
+
+/* Estilo para el GIF de Mario */
+.gif-mario {
+    width: 100%; /* Mismo ancho que MY CV.png */
+    height: auto; /* Se escala proporcionalmente */
+    position: absolute;
+    top: 2697px; /* Posición desde la parte superior */
+    left: 0;
+    z-index: 2; /* Se coloca por encima de MY CV.png */
 }
 
 /* Estilo para los botones de navegación */
 .nav-buttons {
     position: absolute;
-    top: 45px; /* Espacio desde el borde superior */
-    left: 127px; /* Espacio desde el borde izquierdo */
+    top: 45px;
+    left: 127px;
     display: flex;
-    gap: 60px; /* Espacio entre los botones */
+    gap: 60px;
 }
 
 .nav-buttons button {
     background: transparent;
     border: none;
-    color: #464646; /* Cambié el color del texto */
+    color: #464646;
     font-family: 'MuktaVaani-ExtraBold', sans-serif;
     font-size: 17px;
     font-weight: 200;
