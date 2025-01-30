@@ -24,7 +24,7 @@ header.header img {
 .nav-buttons {
     position: absolute;
     top: 43px; /* Espacio desde el borde superior de la imagen */
-    left: 125px; /* Espacio desde el borde izquierdo de la imagen */
+    left: 127px; /* Espacio desde el borde izquierdo de la imagen */
     display: flex;
     gap: 60px; /* Espacio entre los botones */
 }
@@ -32,9 +32,9 @@ header.header img {
 .nav-buttons button {
     background: transparent;
     border: none;
-    color: #303030; /* Cambié el color del texto a #303030 */
+    color: #404040; /* Cambié el color del texto a #303030 */
     font-family: 'MuktaVaani-ExtraBold', sans-serif; /* Aplica la fuente MuktaVaani-ExtraBold */
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 700; /* Cambié el peso a 700 */
     cursor: pointer;
     transition: color 0.3s ease;
@@ -42,5 +42,5 @@ header.header img {
 
 /* Efecto cuando el cursor pasa por encima del botón */
 .nav-buttons button:hover {
-    color: #FF6347; /* Puedes cambiar el color del hover */
+    color: #FFD667; /* Puedes cambiar el color del hover */
 }
