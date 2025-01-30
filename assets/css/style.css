@@ -34,8 +34,8 @@ header.header img {
     border: none;
     color: #464646; /* Cambié el color del texto a #303030 */
     font-family: 'MuktaVaani-ExtraBold', sans-serif; /* Aplica la fuente MuktaVaani-ExtraBold */
-    font-size: 20px;
-    font-weight: 300; /* Cambié el peso a 700 */
+    font-size: 18px;
+    font-weight: 200; /* Cambié el peso a 700 */
     cursor: pointer;
     transition: color 0.3s ease;
 }
