@@ -23,7 +23,7 @@ header.header img {
 /* Estilo para los botones de navegación */
 .nav-buttons {
     position: absolute;
-    top: 45px; /* Espacio desde el borde superior de la imagen */
+    top: 38px; /* Espacio desde el borde superior de la imagen */
     left: 140px; /* Espacio desde el borde izquierdo de la imagen */
     display: flex;
     gap: 60px; /* Espacio entre los botones */
