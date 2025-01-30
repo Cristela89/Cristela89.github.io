@@ -8,52 +8,43 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    overflow-x: hidden; /* Evita desbordamientos laterales */
 }
 
+/* Estilos del header */
 header.header {
-    width: 100%; /* Ocupa todo el ancho del viewport */
-    position: relative;
-}
-
-header.header img {
-    width: 100%; /* Escala la imagen al ancho del viewport */
-    height: auto; /* Mantiene la proporción original de la imagen */
+    width: 100%;
+    height: 200px; /* Ajusta la altura según sea necesario */
+    background-image: url('../img/fondo_header.png'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /* Estilo para los botones de navegación */
 .nav-buttons {
     position: absolute;
-    top: 38px; /* Espacio desde el borde superior de la imagen */
-    left: 140px; /* Espacio desde el borde izquierdo de la imagen */
+    top: 45px;
+    left: 140px;
     display: flex;
-    gap: 60px; /* Espacio entre los botones */
+    gap: 60px;
 }
 
 .nav-buttons button {
     background: transparent;
     border: none;
-    color: #505050; /* Cambié el color del texto a #303030 */
-    font-family: 'MuktaVaani-ExtraBold', sans-serif; /* Aplica la fuente MuktaVaani-ExtraBold */
+    color: #505050;
+    font-family: 'MuktaVaani-ExtraBold', sans-serif;
     font-size: 21px;
-    font-weight: 500; /* Cambié el peso a 700 */
+    font-weight: 500;
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
-/* Efecto cuando el cursor pasa por encima del botón */
 .nav-buttons button:hover {
-    color: #FF6347; /* Puedes cambiar el color del hover */
-}
-
-/* Imagen MY CV debajo del navbar */
-.cv-image-container {
-    width: 100%; /* Ocupa el ancho completo */
-    display: flex;
-    justify-content: center;
-}
-
-.cv-image-container img {
-    width: 100%; /* Ocupa el mismo ancho del navbar */
-    height: auto; /* Mantiene su altura original */
+    color: #FF6347;
 }
 
