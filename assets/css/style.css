@@ -44,3 +44,16 @@ header.header img {
 .nav-buttons button:hover {
     color: #FF6347; /* Puedes cambiar el color del hover */
 }
+
+/* Imagen MY CV debajo del navbar */
+.cv-image-container {
+    width: 100%; /* Ocupa el ancho completo */
+    display: flex;
+    justify-content: center;
+}
+
+.cv-image-container img {
+    width: 100%; /* Ocupa el mismo ancho del navbar */
+    height: auto; /* Mantiene su altura original */
+}
+
