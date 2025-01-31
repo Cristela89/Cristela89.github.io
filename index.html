@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Cristela Martínez Ayala</title>
-    <!-- Cargar la fuente MuktaVaani-ExtraBold directamente en el HTML -->
     <style>
         @font-face {
             font-family: 'MuktaVaani-ExtraBold';
@@ -16,20 +15,97 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <header class="header">
+        <!-- Botones encima de la imagen fondo_header.png -->
+        <div class="nav-buttons">
+            <button id="home-btn">Home</button> <!-- Botón Home con ID -->
+            <button id="sobre-mi-btn">Sobre mí</button>
+            <button id="educacion-btn">Educación</button> <!-- Botón Educación con ID -->
+            <button id="experiencia-btn">Experiencia</button> <!-- Botón Experiencia con ID -->
+            <button id="portafolio-btn">Portafolio</button> <!-- Botón Portafolio con ID -->
+            <button id="contacto-btn">Contacto</button> <!-- Botón Contacto con ID -->
+        </div>
+        <img src="assets/img/fondo_header.png" alt="Fondo del header" class="fondo-header">
+    </header>
+    
     <main>
-        <header class="header">
-            <div class="nav-buttons">
-                <button>Home</button>
-                <button>Sobre mí</button>
-                <button>Educación</button>
-                <button>Experiencia</button>
-                <button>Portafolio</button>
-                <button>Contacto</button>
+        <section>
+            <img src="assets/img/MY CV.png" alt="Mi CV" class="my-cv">
+            <img src="assets/img/GIF_MARIO_3.gif" alt="GIF Mario" class="gif-mario">
+            <img src="assets/img/Tu_empresa.png" alt="Tu Empresa" class="tu-empresa">
+        </section>
+
+        <!-- Sección de contacto debajo de la imagen MY CV -->
+        <section class="contacto">
+            <h2>Contacto</h2>
+            <div class="contact-icons">
+                <a href="https://wa.me/5804125850857" target="_blank">
+                    <img src="assets/img/icon_whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="https://www.behance.net/cristelamartinez" target="_blank">
+                    <img src="assets/img/icon_behance.png" alt="Behance">
+                </a>
+                <a href="https://www.linkedin.com/in/cristela-martínez" target="_blank">
+                    <img src="assets/img/icon_linkedin.png" alt="LinkedIn">
+                </a>
             </div>
-            <img src="assets/img/fondo_header.png" alt="Fondo del header" class="fondo-header">
-        </header>
-        <img src="assets/img/MY CV.png" alt="Mi CV" class="my-cv">
-        <img src="assets/img/GIF_MARIO_3.gif" alt="GIF Mario" class="gif-mario">
+        </section>
     </main>
+
+    <!-- Footer agregado -->
+    <footer class="footer">
+        <p>&copy; 2025 - Cristela Martínez</p>
+    </footer>
+
+    <script>
+        // Al hacer clic en el botón "Home", desplazamos la página a 0px desde la parte superior
+        document.getElementById('home-btn').addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Al hacer clic en el botón "Sobre mí", desplazamos la página a 671px desde la parte superior
+        document.getElementById('sobre-mi-btn').addEventListener('click', function () {
+            window.scrollTo({
+                top: 671,
+                behavior: 'smooth'
+            });
+        });
+
+        // Al hacer clic en el botón "Educación", desplazamos la página a 1750px desde la parte superior
+        document.getElementById('educacion-btn').addEventListener('click', function () {
+            window.scrollTo({
+                top: 1940,
+                behavior: 'smooth'
+            });
+        });
+
+        // Al hacer clic en el botón "Experiencia", desplazamos la página a 2447px desde la parte superior
+        document.getElementById('experiencia-btn').addEventListener('click', function () {
+            window.scrollTo({
+                top: 2547,
+                behavior: 'smooth'
+            });
+        });
+
+        // Al hacer clic en el botón "Portafolio", desplazamos la página a 3407px desde la parte superior
+        document.getElementById('portafolio-btn').addEventListener('click', function () {
+            window.scrollTo({
+                top: 3627,
+                behavior: 'smooth'
+            });
+        });
+
+        // Al hacer clic en el botón "Contacto", desplazamos la página a 12875px desde la parte superior
+        document.getElementById('contacto-btn').addEventListener('click', function () {
+            window.scrollTo({
+                top: 13570,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
+

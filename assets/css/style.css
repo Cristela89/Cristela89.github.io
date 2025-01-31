@@ -12,56 +12,112 @@ body {
 
 header.header {
     width: 100%;
-    position: relative;
-}
-
-/* Ajustar el ancho de fondo_header.png al mismo ancho de MY CV.png */
-header.header .fondo-header {
-    width: 100%;
-    height: auto;
-}
-
-/* Estilo para la imagen MY CV.png */
-.my-cv {
-    width: 100%;
-    height: auto;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: -1; /* MY CV.png está detrás del navbar */
+    z-index: 1000;
 }
 
-/* Estilo para el GIF de Mario */
-.gif-mario {
-    width: 100%; /* Mismo ancho que MY CV.png */
-    height: auto; /* Se escala proporcionalmente */
-    position: absolute;
-    top: 2697px; /* Posición desde la parte superior */
-    left: 0;
-    z-index: 2; /* Se coloca por encima de MY CV.png */
-}
-
-/* Estilo para los botones de navegación */
+/* Estilo de los botones encima del fondo_header.png */
 .nav-buttons {
     position: absolute;
-    top: 45px;
-    left: 127px;
+    top: 28px; /* Espacio desde el borde superior de la imagen */
+    left: 114px; /* Espacio desde el borde izquierdo de la imagen */
     display: flex;
-    gap: 60px;
+    gap: 48px; /* Espacio entre los textos de los botones */
 }
 
 .nav-buttons button {
-    background: transparent;
+    background: none;
     border: none;
-    color: #464646;
     font-family: 'MuktaVaani-ExtraBold', sans-serif;
-    font-size: 17px;
-    font-weight: 200;
+    font-size: 15px; /* Tamaño de fuente actualizado */
+    color: #858585; /* Color de texto inicial */
     cursor: pointer;
-    transition: color 0.3s ease;
 }
 
-/* Efecto cuando el cursor pasa por encima del botón */
+/* Hover efecto */
 .nav-buttons button:hover {
-    color: #B55FFF;
+    color: #FFD667; /* Color al hacer hover */
+}
+
+.fondo-header {
+    width: 100%;
+    height: auto;
+}
+
+.my-cv {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.gif-mario {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 2803px;
+    left: 0;
+    z-index: 2;
+}
+
+.tu-empresa {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 2809px;
+    left: 0;
+    z-index: 3;
+}
+
+/* Sección de contacto */
+.contacto {
+    background-color: #FFE9AC;
+    width: 100%;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -10px; /* Ajuste para eliminar el espacio */
+}
+
+.contacto h2 {
+    font-family: 'MuktaMahee-Medium', sans-serif;
+    font-size: 32px;
+    color: #636363;
+    margin-bottom: 20px;
+}
+
+.contact-icons {
+    display: flex;
+    gap: 56px;
+}
+
+.contact-icons img {
+    height: auto;
+    cursor: pointer;
+}
+
+/* Footer agregado */
+.footer {
+    width: 100%;
+    height: 70px;
+    background-color: #FFD667;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -10px; /* Ajuste para eliminar el espacio entre el contacto y el footer */
+}
+
+.footer p {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #636363;
 }
