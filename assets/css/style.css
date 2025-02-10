@@ -119,7 +119,7 @@
   }
   
   /* Breakpoint para Android Compact (versión mobile) */
-  @media (max-width: 412px) {
+  @media (max-width: 500px) {
     /* Puedes agregar estilos específicos para mobile si es necesario */
   }
   
