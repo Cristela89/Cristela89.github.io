@@ -120,6 +120,11 @@
   
   /* Breakpoint para Android Compact (versión mobile) */
   @media (max-width: 500px) {
-    /* Puedes agregar estilos específicos para mobile si es necesario */
+    /* Para mobile, removemos el posicionamiento fixed del header
+       para que la imagen (imagen_para_mobile) se incluya en el flujo
+       y permita hacer scroll en toda su vertical */
+    header.header {
+      position: relative;
+    }
   }
   
