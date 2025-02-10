@@ -1,102 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Cristela Martínez Ayala</title>
-    <style>
-        @font-face {
-            font-family: 'MuktaVaani-ExtraBold';
-            src: url('assets/fonts/MuktaVaani-ExtraBold.ttf') format('truetype');
-            font-weight: 200;
-            font-style: normal;
-        }
-    </style>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Cristela Martínez Ayala</title>
+  <style>
+    @font-face {
+      font-family: 'MuktaVaani-ExtraBold';
+      src: url('assets/fonts/MuktaVaani-ExtraBold.ttf') format('truetype');
+      font-weight: 200;
+      font-style: normal;
+    }
+  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="nav-buttons">
-            <button id="home-btn">Home</button>
-            <button id="sobre-mi-btn">Sobre mí</button>
-            <button id="educacion-btn">Educación</button>
-            <button id="experiencia-btn">Experiencia</button>
-            <button id="portafolio-btn">Portafolio</button>
-            <button id="contacto-btn">Contacto</button>
-        </div>
-        <img src="assets/img/fondo_header.png" alt="Fondo del header" class="fondo-header">
-    </header>
-    
-    <main>
-        <section>
-            <img src="assets/img/MY CV.png" alt="Mi CV" class="my-cv">
-            <img src="assets/img/GIF_MARIO_3.gif" alt="GIF Mario" class="gif-mario">
-            <img src="assets/img/Tu_empresa.png" alt="Tu Empresa" class="tu-empresa">
-        </section>
+  <header class="header">
+    <div class="nav-buttons">
+      <button id="home-btn">Home</button>
+      <button id="sobre-mi-btn">Sobre mí</button>
+      <button id="educacion-btn">Educación</button>
+      <button id="experiencia-btn">Experiencia</button>
+      <button id="portafolio-btn">Portafolio</button>
+      <button id="contacto-btn">Contacto</button>
+    </div>
+    <!-- Se utiliza <picture> para mostrar una imagen distinta en mobile -->
+    <picture>
+      <source media="(max-width: 412px)" srcset="assets/img/imagen_para_mobile">
+      <img src="assets/img/fondo_header.png" alt="Fondo del header" class="fondo-header">
+    </picture>
+  </header>
+  
+  <main>
+    <section>
+      <img src="assets/img/MY CV.png" alt="Mi CV" class="my-cv">
+      <img src="assets/img/GIF_MARIO_3.gif" alt="GIF Mario" class="gif-mario">
+      <img src="assets/img/Tu_empresa.png" alt="Tu Empresa" class="tu-empresa">
+    </section>
 
-        <section class="contacto">
-            <h2>Contacto</h2>
-            <div class="contact-icons">
-                <a href="https://wa.me/5804125850857" target="_blank">
-                    <img src="assets/img/icon_whatsapp.png" alt="WhatsApp">
-                </a>
-                <a href="https://www.behance.net/cristelamartinez" target="_blank">
-                    <img src="assets/img/icon_behance.png" alt="Behance">
-                </a>
-                <a href="https://www.linkedin.com/in/cristela-martínez" target="_blank">
-                    <img src="assets/img/icon_linkedin.png" alt="LinkedIn">
-                </a>
-            </div>
-        </section>
-    </main>
+    <section class="contacto">
+      <h2>Contacto</h2>
+      <div class="contact-icons">
+        <a href="https://wa.me/5804125850857" target="_blank">
+          <img src="assets/img/icon_whatsapp.png" alt="WhatsApp">
+        </a>
+        <a href="https://www.behance.net/cristelamartinez" target="_blank">
+          <img src="assets/img/icon_behance.png" alt="Behance">
+        </a>
+        <a href="https://www.linkedin.com/in/cristela-martínez" target="_blank">
+          <img src="assets/img/icon_linkedin.png" alt="LinkedIn">
+        </a>
+      </div>
+    </section>
+  </main>
 
-    <footer class="footer">
-        <p>&copy; 2025 - Cristela Martínez Ayala</p>
-    </footer>
+  <footer class="footer">
+    <p>&copy; 2025 - Cristela Martínez Ayala</p>
+  </footer>
 
-    <script>
-        document.getElementById('home-btn').addEventListener('click', function () {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+  <script>
+    document.getElementById('home-btn').addEventListener('click', function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
 
-        document.getElementById('sobre-mi-btn').addEventListener('click', function () {
-            window.scrollTo({
-                top: 671,
-                behavior: 'smooth'
-            });
-        });
+    document.getElementById('sobre-mi-btn').addEventListener('click', function () {
+      window.scrollTo({
+        top: 671,
+        behavior: 'smooth'
+      });
+    });
 
-        document.getElementById('educacion-btn').addEventListener('click', function () {
-            window.scrollTo({
-                top: 1940,
-                behavior: 'smooth'
-            });
-        });
+    document.getElementById('educacion-btn').addEventListener('click', function () {
+      window.scrollTo({
+        top: 1940,
+        behavior: 'smooth'
+      });
+    });
 
-        document.getElementById('experiencia-btn').addEventListener('click', function () {
-            window.scrollTo({
-                top: 2547,
-                behavior: 'smooth'
-            });
-        });
+    document.getElementById('experiencia-btn').addEventListener('click', function () {
+      window.scrollTo({
+        top: 2547,
+        behavior: 'smooth'
+      });
+    });
 
-        document.getElementById('portafolio-btn').addEventListener('click', function () {
-            window.scrollTo({
-                top: 3627,
-                behavior: 'smooth'
-            });
-        });
+    document.getElementById('portafolio-btn').addEventListener('click', function () {
+      window.scrollTo({
+        top: 3627,
+        behavior: 'smooth'
+      });
+    });
 
-        document.getElementById('contacto-btn').addEventListener('click', function () {
-            window.scrollTo({
-                top: 13570,
-                behavior: 'smooth'
-            });
-        });
-    </script>
+    document.getElementById('contacto-btn').addEventListener('click', function () {
+      window.scrollTo({
+        top: 13570,
+        behavior: 'smooth'
+      });
+    });
+  </script>
 </body>
 </html>
+
 
