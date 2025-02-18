@@ -5,7 +5,7 @@
 }
 
 /* Estilo para la versión Android Medium con un breakpoint */
-@media (min-width: 401px) and (max-width: 480px) {
+@media (min-width: 411px) and (max-width: 891px) {
   #header-img {
     content: url("assets/img/medium/header_medium.png"); /* Cargar la imagen para Android Medium */
     width: 100%; /* Asegurarse de que ocupe todo el ancho */
