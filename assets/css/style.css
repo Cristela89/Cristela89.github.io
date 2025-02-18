@@ -1,35 +1,14 @@
-/* Reset básico para evitar problemas de márgenes y paddings */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  overflow-x: hidden; /* Evita el scroll horizontal */
-  background-color: #f8f9fa; /* Color de fondo opcional */
-}
-
-/* Estilos del header */
-header {
-  width: 100%;
-}
-
-header img {
-  width: 100vw; /* La imagen ocupa todo el ancho de la pantalla */
-  height: auto; /* Mantiene la proporción */
-  display: block;
-}
-
-/* 📌 Estilos por defecto: Android Compact (≤400px) */
+/* Estilo para el Header en dispositivos Android Compact */
 #header-img {
-  content: url("assets/img/compact/Header_compact.png");
+  width: 100%; /* Hacer que la imagen ocupe todo el ancho */
+  height: auto; /* Escalar la altura proporcionalmente */
 }
 
-/* 📌 Breakpoint para Android Medium (401px - 480px) */
+/* Estilo para la versión Android Medium con un breakpoint */
 @media (min-width: 401px) and (max-width: 480px) {
   #header-img {
-    content: url("assets/img/medium/header_medium.png");
+    content: url("assets/img/medium/header_medium.png"); /* Cargar la imagen para Android Medium */
+    width: 100%; /* Asegurarse de que ocupe todo el ancho */
+    height: auto; /* Escalar la altura proporcionalmente */
   }
 }
