@@ -1,130 +1,17 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-  }
-  
-  header.header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-  }
-  
-  .nav-buttons {
-    position: absolute;
-    top: 28px;
-    left: 114px;
-    display: flex;
-    gap: 48px;
-  }
-  
-  .nav-buttons button {
-    background: none;
-    border: none;
-    font-family: 'MuktaVaani-ExtraBold', sans-serif;
-    font-size: 15px;
-    color: #858585;
-    cursor: pointer;
-  }
-  
-  .nav-buttons button:hover {
-    color: #FFD667;
-  }
-  
-  .fondo-header {
-    width: 100%;
-    height: auto;
-  }
-  
-  .my-cv {
-    width: 100%;
-    height: auto;
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 0;
-  }
-  
-  .gif-mario {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 2803px;
-    left: 0;
-    z-index: 2;
-  }
-  
-  .tu-empresa {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 2809px;
-    left: 0;
-    z-index: 3;
-  }
-  
-  .contacto {
-    background-color: #FFE9AC;
-    width: 100%;
-    height: 210px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: -10px;
-  }
-  
-  .contacto h2 {
-    font-family: 'MuktaMahee-Medium', sans-serif;
-    font-size: 32px;
-    color: #636363;
-    margin-bottom: 20px;
-  }
-  
-  .contact-icons {
-    display: flex;
-    gap: 56px;
-  }
-  
-  .contact-icons img {
-    height: auto;
-    cursor: pointer;
-  }
-  
-  /* Footer agregado */
-  .footer {
-    width: 100%;
-    height: 70px;
-    background-color: #FFD667;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: -10px;
-  }
-  
-  .footer p {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #636363;
-  }
-  
-  /* Breakpoint para Android Compact (versión mobile) */
-  @media (max-width: 500px) {
-    /* Para mobile, removemos el posicionamiento fixed del header
-       para que la imagen (imagen_para_mobile) se incluya en el flujo
-       y permita hacer scroll en toda su vertical */
-    header.header {
-      position: relative;
-    }
-  }
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+}
+
+header img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
   
