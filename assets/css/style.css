@@ -26,12 +26,32 @@ html, body {
   display: block;
 }
 
-/* Breakpoint for Android Medium */
-@media (max-width: 768px) {
-  .header-container {
-    margin-top: 0;
+/* Breakpoint for small devices (phones in portrait) */
+@media (max-width: 480px) {
+  .header-image {
+    width: 100%;
+    height: auto;
   }
+}
 
+/* Breakpoint for medium devices (phones in landscape or smaller tablets) */
+@media (max-width: 768px) {
+  .header-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Breakpoint for large devices (tablets in landscape or larger devices) */
+@media (max-width: 1024px) {
+  .header-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Breakpoint for extra large devices (desktops and larger screens) */
+@media (min-width: 1025px) {
   .header-image {
     width: 100%;
     height: auto;
