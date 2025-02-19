@@ -21,9 +21,9 @@ html, body {
 
 /* Styling the header image */
 .header-image {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 100%;    /* Ensures image scales to 100% of its container */
+  height: auto;   /* Keeps the aspect ratio intact */
+  display: block; /* Ensures no space below the image */
 }
 
 /* Breakpoint for small devices (phones in portrait) */
@@ -57,3 +57,5 @@ html, body {
     height: auto;
   }
 }
+
+
