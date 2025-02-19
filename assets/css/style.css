@@ -5,11 +5,18 @@
   box-sizing: border-box;
 }
 
+/* Ensuring the body and html do not exceed the screen width */
+html, body {
+  width: 100%;
+  overflow-x: hidden;  /* Prevent horizontal scrolling */
+}
+
 /* Styling the header container */
 .header-container {
   position: relative;
   width: 100%;
   height: auto;
+  overflow: hidden; /* Ensures no scroll inside the container */
 }
 
 /* Styling the header image */
