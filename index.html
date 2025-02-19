@@ -10,12 +10,39 @@
 
   <header class="header">
     <img src="assets/img/medium/header_mediano.png" alt="Encabezado" class="header-image">
+    <img src="assets/img/medium/hamburger.png" alt="Menú" class="hamburger-image" id="menu-toggle">
   </header>
+
+  <nav class="menu" id="menu">
+    <ul>
+      <li>Sobre mí</li>
+      <li>Experiencia</li>
+      <li>Portafolio</li>
+      <li>Contacto</li>
+    </ul>
+  </nav>
 
   <main class="content">
     <img src="assets/img/medium/seccion1.png" alt="Sección 1" class="section-image">
   </main>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("menu");
+
+      menuToggle.addEventListener("click", function () {
+        menu.classList.toggle("active"); // Abre/cierra el menú
+      });
+
+      // Cerrar el menú si se hace clic fuera de él
+      document.addEventListener("click", function (event) {
+        if (!menu.contains(event.target) && event.target !== menuToggle) {
+          menu.classList.remove("active");
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
-

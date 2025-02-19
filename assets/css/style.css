@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 body {
@@ -22,6 +23,52 @@ body {
   display: block;
 }
 
+.hamburger-image {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  height: 100%; /* Misma altura que la imagen header_mediano.png */
+  width: auto; /* Mantiene la proporción del ancho */
+  cursor: pointer;
+  z-index: 20;
+}
+
+/* Estilos del menú desplegable */
+.menu {
+  position: fixed;
+  top: 0;
+  right: -200px; /* Oculto inicialmente */
+  width: 200px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.menu li {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #555555;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+/* Mostrar el menú cuando se active */
+.menu.active {
+  right: 0;
+}
+
 .content {
   margin-top: -4px; /* Elimina cualquier espacio entre las imágenes */
 }
@@ -34,7 +81,6 @@ body {
 /* Breakpoint para Android Medium */
 @media screen and (max-width: 768px) {
   .header-image, .section-image {
-    width: 100vw; /* Se mantiene el ajuste en dispositivos pequeños */
+    width: 100vw;
   }
 }
-
