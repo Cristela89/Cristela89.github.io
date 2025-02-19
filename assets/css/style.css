@@ -1,61 +1,36 @@
-/* Resetting margin and padding */
+/* Establecer márgenes y relleno a cero para evitar espacios adicionales */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Ensuring the body and html do not exceed the screen width */
-html, body {
+body, html {
   width: 100%;
-  overflow-x: hidden;  /* Prevent horizontal scrolling */
+  height: 100%;
 }
 
-/* Styling the header container */
-.header-container {
-  position: relative;
+/* Hacer que el header esté pegado al borde superior de la pantalla */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  overflow: hidden; /* Ensures no scroll inside the container */
+  z-index: 10;
 }
 
-/* Styling the header image */
-.header-image {
-  width: 100%;    /* Ensures image scales to 100% of its container */
-  height: auto;   /* Keeps the aspect ratio intact */
-  display: block; /* Ensures no space below the image */
+/* Estilo para la imagen */
+header img {
+  width: 100%; /* Ancho de la imagen al 100% del ancho de la pantalla */
+  height: auto; /* Mantener la proporción de la imagen */
 }
 
-/* Breakpoint for small devices (phones in portrait) */
-@media (max-width: 480px) {
-  .header-image {
+/* Estilo para dispositivos Android Medium (como el Redmi Note 11 Pro 5G) */
+@media screen and (max-width: 768px) {
+  /* Puedes ajustar aquí los estilos si fuera necesario */
+  header img {
     width: 100%;
     height: auto;
   }
 }
-
-/* Breakpoint for medium devices (phones in landscape or smaller tablets) */
-@media (max-width: 768px) {
-  .header-image {
-    width: 100%;
-    height: auto;
-  }
-}
-
-/* Breakpoint for large devices (tablets in landscape or larger devices) */
-@media (max-width: 1024px) {
-  .header-image {
-    width: 100%;
-    height: auto;
-  }
-}
-
-/* Breakpoint for extra large devices (desktops and larger screens) */
-@media (min-width: 1025px) {
-  .header-image {
-    width: 100%;
-    height: auto;
-  }
-}
-
 
