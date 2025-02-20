@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV-CRISTELA</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
 
@@ -24,6 +25,28 @@
 
   <main class="content">
     <img src="assets/img/medium/seccion1.png" alt="Sección 1" class="section-image">
+    
+    <div class="icon-container">
+      <a href="https://wa.me/59178055007" target="_blank" class="icon"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/aurea_muebles_bo/" target="_blank" class="icon"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=100083565722365&locale=et_EE" target="_blank" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+    </div>
+
+    <div class="carousel-container">
+      <div class="carousel">
+        <img src="assets/img/medium/carrusel_a/foto1a.png" alt="Foto 1">
+        <img src="assets/img/medium/carrusel_a/foto2a.png" alt="Foto 2">
+        <img src="assets/img/medium/carrusel_a/foto3a.png" alt="Foto 3">
+        <img src="assets/img/medium/carrusel_a/foto4a.png" alt="Foto 4">
+        <img src="assets/img/medium/carrusel_a/foto5a.png" alt="Foto 5">
+        <img src="assets/img/medium/carrusel_a/foto6a.png" alt="Foto 6">
+        <img src="assets/img/medium/carrusel_a/foto7a.png" alt="Foto 7">
+        <img src="assets/img/medium/carrusel_a/foto8a.png" alt="Foto 8">
+        <img src="assets/img/medium/carrusel_a/foto9a.png" alt="Foto 9">
+        <img src="assets/img/medium/carrusel_a/foto10a.png" alt="Foto 10">
+      </div>
+      <div class="carousel-dots"></div>
+    </div>
   </main>
 
   <script>
@@ -32,15 +55,47 @@
       const menu = document.getElementById("menu");
 
       menuToggle.addEventListener("click", function () {
-        menu.classList.toggle("active"); // Abre/cierra el menú
+        menu.classList.toggle("active");
       });
 
-      // Cerrar el menú si se hace clic fuera de él
       document.addEventListener("click", function (event) {
         if (!menu.contains(event.target) && event.target !== menuToggle) {
           menu.classList.remove("active");
         }
       });
+
+      const carousel = document.querySelector(".carousel");
+      const images = document.querySelectorAll(".carousel img");
+      const dotsContainer = document.querySelector(".carousel-dots");
+      let index = 0;
+
+      images.forEach((_, i) => {
+        const dot = document.createElement("span");
+        dot.classList.add("dot");
+        if (i === 0) dot.classList.add("active");
+        dot.addEventListener("click", () => {
+          index = i;
+          updateCarousel();
+        });
+        dotsContainer.appendChild(dot);
+      });
+
+      function updateCarousel() {
+        carousel.style.transform = `translateX(${-index * 100}%)`;
+        document.querySelectorAll(".dot").forEach((dot, i) => {
+          dot.classList.toggle("active", i === index);
+        });
+      }
+
+      let startX = 0;
+      carousel.addEventListener("touchstart", (e) => (startX = e.touches[0].clientX));
+      carousel.addEventListener("touchend", (e) => {
+        const endX = e.changedTouches[0].clientX;
+        if (startX > endX + 50) index = Math.min(index + 1, images.length - 1);
+        if (startX < endX - 50) index = Math.max(index - 1, 0);
+        updateCarousel();
+      });
+
     });
   </script>
 
