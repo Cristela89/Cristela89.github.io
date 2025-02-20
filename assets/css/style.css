@@ -88,6 +88,9 @@ body {
   background-color: #B55FFF;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center; /* Centra las imágenes verticalmente */
+  justify-content: center;
 }
 
 .carousel {
@@ -98,8 +101,9 @@ body {
 
 .carousel img {
   width: 100vw;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain; /* Centra la imagen verticalmente sin recortar */
   flex-shrink: 0;
 }
 
@@ -129,4 +133,46 @@ body {
   .header-image, .section-image {
     width: 100vw;
   }
+}
+
+.info-container {
+  width: 100vw; /* Mismo ancho que el carrusel */
+  height: 100px;
+  background-color: #E3FF12;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.info-container p {
+  font-size: 10px;
+  color: #707070;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 2px 0;
+}
+
+.seccion2-img {
+  width: 100%; /* Mismo ancho que info-container */
+  height: auto; /* Escala proporcionalmente */
+  display: block; /* Evita espacios blancos debajo de la imagen */
+}
+
+/* Estilo para la imagen seccion3 */
+.section3-container {
+  width: 100vw; /* Igual que el ancho de los iconos sociales */
+  display: flex;
+  justify-content: center; /* Centra la imagen */
+}
+
+.section3-image {
+  width: 100%; /* La imagen ocupará el 100% del ancho de su contenedor */
+  height: auto; /* Escala la altura proporcionalmente */
+  object-fit: contain; /* Mantiene la proporción sin recortar */
+}
+
+.img-seccion4 {
+  width: 100%;
+  height: auto;
 }
