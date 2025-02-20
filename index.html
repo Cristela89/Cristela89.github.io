@@ -88,11 +88,16 @@
       }
 
       let startX = 0;
+      let endX = 0;
+
       carousel.addEventListener("touchstart", (e) => (startX = e.touches[0].clientX));
       carousel.addEventListener("touchend", (e) => {
-        const endX = e.changedTouches[0].clientX;
-        if (startX > endX + 50) index = Math.min(index + 1, images.length - 1);
-        if (startX < endX - 50) index = Math.max(index - 1, 0);
+        endX = e.changedTouches[0].clientX;
+        if (startX > endX + 50) {
+          index = Math.min(index + 1, images.length - 1);
+        } else if (startX < endX - 50) {
+          index = Math.max(index - 1, 0);
+        }
         updateCarousel();
       });
 
