@@ -1,178 +1,145 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Ubuntu', sans-serif;
-}
-
-body {
-  overflow-x: hidden;
-  width: 100vw;
-}
-
-.header {
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
-
-.header-image {
-  width: 100vw;
-  display: block;
-}
-
-.hamburger-image {
-  position: absolute;
-  top: 0;
-  right: 10px;
-  height: 100%;
-  width: auto;
-  cursor: pointer;
-  z-index: 20;
-}
-
-/* Menú */
-.menu {
-  position: fixed;
-  top: 0;
-  right: -200px;
-  width: 200px;
-  height: 100vh;
-  background-color: white;
-  transition: right 0.3s ease-in-out;
-  z-index: 15;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.menu ul {
-  list-style: none;
-  padding: 20px;
-}
-
-.menu li {
-  font-size: 20px;
-  color: #555555;
-  padding: 15px 0;
-  cursor: pointer;
-}
-
-.menu.active {
-  right: 0;
-}
-
-/* Sección de iconos */
-.icon-container {
-  width: 100vw;
-  height: 55px;
-  background-color: #D9D9D9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-}
-
-.icon {
-  font-size: 30px;
-  color: #707070;
-  text-decoration: none;
-}
-
-/* Carrusel */
-.carousel-container {
-  width: 100vw;
-  height: 510px;
-  background-color: #B55FFF;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center; /* Centra las imágenes verticalmente */
-  justify-content: center;
-}
-
-.carousel {
-  display: flex;
-  transition: transform 0.4s ease-in-out;
-  width: 100vw;
-}
-
-.carousel img {
-  width: 100vw;
-  height: auto;
-  max-height: 100%;
-  object-fit: contain; /* Centra la imagen verticalmente sin recortar */
-  flex-shrink: 0;
-}
-
-/* Puntos del carrusel */
-.carousel-dots {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 5px;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  background-color: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.dot.active {
-  background-color: #555;
-}
-
-@media screen and (max-width: 768px) {
-  .header-image, .section-image {
-    width: 100vw;
+/* ==========================
+   ESTILOS GENERALES
+   ========================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
+  
+  body {
+    overflow-x: hidden;
+    width: 100vw;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  
+  .header {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  
+  .header-image {
+    width: 100vw;
+    display: block;
+  }
+  
+  .hamburger-image {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    cursor: pointer;
+  }
+  
+  /* Mejorando el diseño del menú */
+  .menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .menu ul {
+    list-style: none;
+  }
+  
+  .menu ul li {
+    font-weight: 400;
+    font-size: 20px;
+    color: #555555;
+    padding: 12px 0;
+    transition: background 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  .menu ul li:hover {
+    background: #f2f2f2;
+    cursor: pointer;
+  }
+  
+  /* ==========================
+     CARRUSEL-A
+     ========================== */
+  .carousel-container {
+    background-color: #00cffe;
+    height: 510px;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-image {
+    width: 100vw; /* Asegura que la imagen tenga el mismo ancho que el fondo del carrusel */
+    height: 100%;  /* La altura ahora será igual al contenedor */
+    object-fit: cover; /* Hace que la imagen cubra el fondo completamente, recortando si es necesario */
+    display: none; /* Inicialmente ocultamos todas las imágenes */
+  }
+  
+  .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .dot {
+    height: 8px;  /* Tamaño reducido de 10px a 8px */
+    width: 8px;   /* Tamaño reducido de 10px a 8px */
+    margin: 0 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+  }
+  
+  .dot.active {
+    background-color: #B55FFF;
+  }
+  
+  /* ==========================
+     BREAKPOINTS
+     ========================== */
+  
+  /* Breakpoint para dispositivos pequeños */
+  @media screen and (max-width: 768px) {
+    .header-image, .section-image {
+      width: 100vw;
+    }
+  }
+
+  /* ==========================
+   ESTILOS DEL CARRUSEL
+   ========================== */
+
+.carousel-image {
+  width: 100vw; /* Asegura que la imagen tenga el mismo ancho que el fondo del carrusel */
+  height: 100%;  /* La altura ahora será igual al contenedor */
+  object-fit: cover; /* Hace que la imagen cubra el fondo completamente, recortando si es necesario */
+  display: none; /* Inicialmente ocultamos todas las imágenes */
 }
 
-.info-container {
-  width: 100vw; /* Mismo ancho que el carrusel */
-  height: 100px;
-  background-color: #E3FF12;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.info-container p {
-  font-size: 10px;
-  color: #707070;
-  font-family: 'Ubuntu', sans-serif;
-  margin: 2px 0;
-}
-
-.seccion2-img {
-  width: 100%; /* Mismo ancho que info-container */
-  height: auto; /* Escala proporcionalmente */
-  display: block; /* Evita espacios blancos debajo de la imagen */
-}
-
-/* Estilo para la imagen seccion3 */
-.section3-container {
-  width: 100vw; /* Igual que el ancho de los iconos sociales */
-  display: flex;
-  justify-content: center; /* Centra la imagen */
-}
-
-.section3-image {
-  width: 100%; /* La imagen ocupará el 100% del ancho de su contenedor */
-  height: auto; /* Escala la altura proporcionalmente */
-  object-fit: contain; /* Mantiene la proporción sin recortar */
-}
-
-.img-seccion4 {
-  width: 100%;
-  height: auto;
+.carousel-image.active {
+  display: block; /* Solo mostramos la imagen activa */
 }
