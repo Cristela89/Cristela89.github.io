@@ -21,51 +21,51 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let currentIndex = 0;
 
-    // Muestra la imagen correspondiente al índice actual
     function showImage(index) {
       images.forEach(img => img.style.display = "none");
       images[index].style.display = "block";
-
       dots.forEach(dot => dot.classList.remove("active"));
       dots[index].classList.add("active");
     }
 
     showImage(currentIndex);
 
-    // Función para manejar el deslizamiento hacia adelante
     function nextImage() {
       currentIndex = (currentIndex + 1) % images.length;
       showImage(currentIndex);
     }
 
-    // Función para manejar el deslizamiento hacia atrás
     function prevImage() {
       currentIndex = (currentIndex - 1 + images.length) % images.length;
       showImage(currentIndex);
     }
 
-    let touchStartX = 0;
-    let touchEndX = 0;
+    let touchStartX = 0, touchEndX = 0;
+    let touchStartY = 0, touchEndY = 0;
 
-    // Maneja el toque de inicio para el deslizamiento
     function handleTouchStart(e) {
       touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
     }
 
-    // Maneja el toque final para el deslizamiento
     function handleTouchEnd(e) {
       touchEndX = e.changedTouches[0].screenX;
-      if (touchEndX < touchStartX) nextImage();
-      if (touchEndX > touchStartX) prevImage();
+      touchEndY = e.changedTouches[0].screenY;
+      let deltaX = touchEndX - touchStartX;
+      let deltaY = touchEndY - touchStartY;
+
+      if (Math.abs(deltaX) > Math.abs(deltaY)) { // Solo cambiar si el deslizamiento es horizontal
+        if (deltaX < 0) nextImage();
+        if (deltaX > 0) prevImage();
+      }
     }
 
     carousel.addEventListener("touchstart", handleTouchStart, false);
     carousel.addEventListener("touchend", handleTouchEnd, false);
   }
 
-  // Inicializa los carruseles A, B, C y D
   setupCarousel("carouselA", "dotsA");
   setupCarousel("carouselB", "dotsB");
   setupCarousel("carouselC", "dotsC");
-  setupCarousel("carouselD", "dotsD");  // Inicializa CARRUSEL-D
+  setupCarousel("carouselD", "dotsD");
 });
