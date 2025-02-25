@@ -21,51 +21,80 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let currentIndex = 0;
 
+    // Muestra la imagen correspondiente al índice actual
     function showImage(index) {
-      images.forEach(img => img.style.display = "none");
-      images[index].style.display = "block";
-      dots.forEach(dot => dot.classList.remove("active"));
-      dots[index].classList.add("active");
+      images.forEach((img, i) => {
+        img.style.display = i === index ? "block" : "none";
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
     }
 
     showImage(currentIndex);
 
+    // Función para avanzar a la siguiente imagen (pero sin volver a la primera)
     function nextImage() {
-      currentIndex = (currentIndex + 1) % images.length;
-      showImage(currentIndex);
+      if (currentIndex < images.length - 1) {
+        currentIndex++;
+        showImage(currentIndex);
+      }
     }
 
+    // Función para retroceder a la imagen anterior (pero sin ir a la última)
     function prevImage() {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-      showImage(currentIndex);
+      if (currentIndex > 0) {
+        currentIndex--;
+        showImage(currentIndex);
+      }
     }
 
-    let touchStartX = 0, touchEndX = 0;
-    let touchStartY = 0, touchEndY = 0;
+    let touchStartX = 0;
+    let touchEndX = 0;
 
+    // Maneja el toque de inicio para el deslizamiento
     function handleTouchStart(e) {
       touchStartX = e.changedTouches[0].screenX;
-      touchStartY = e.changedTouches[0].screenY;
     }
 
+    // Maneja el toque final para el deslizamiento
     function handleTouchEnd(e) {
       touchEndX = e.changedTouches[0].screenX;
-      touchEndY = e.changedTouches[0].screenY;
-      let deltaX = touchEndX - touchStartX;
-      let deltaY = touchEndY - touchStartY;
-
-      if (Math.abs(deltaX) > Math.abs(deltaY)) { // Solo cambiar si el deslizamiento es horizontal
-        if (deltaX < 0) nextImage();
-        if (deltaX > 0) prevImage();
-      }
+      if (touchEndX < touchStartX) nextImage();
+      if (touchEndX > touchStartX) prevImage();
     }
 
     carousel.addEventListener("touchstart", handleTouchStart, false);
     carousel.addEventListener("touchend", handleTouchEnd, false);
   }
 
+  // Inicializa los carruseles A, B, C y D
   setupCarousel("carouselA", "dotsA");
   setupCarousel("carouselB", "dotsB");
   setupCarousel("carouselC", "dotsC");
   setupCarousel("carouselD", "dotsD");
+
+  // === SCROLL INSTANTÁNEO ===
+  const sobreMiBtn = document.getElementById('sobre-mi');
+  const experienciaBtn = document.getElementById('experiencia');
+  const portafolioBtn = document.getElementById('portafolio');
+  const contactoBtn = document.getElementById('contacto');
+
+  // Función para hacer scroll a las posiciones específicas
+  sobreMiBtn.addEventListener('click', function() {
+    window.scrollTo(0, 0); // Ir al inicio de la página
+  });
+
+  experienciaBtn.addEventListener('click', function() {
+    window.scrollTo(0, 1490); // Ir a 2620px desde el borde superior
+  });
+
+  portafolioBtn.addEventListener('click', function() {
+    window.scrollTo(0, 5560); // Ir a 10150px desde el borde superior
+  });
+
+  contactoBtn.addEventListener('click', function() {
+    window.scrollTo(0, document.body.scrollHeight); // Ir al final de la página
+  });
 });

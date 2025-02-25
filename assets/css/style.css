@@ -71,7 +71,7 @@
      CARRUSEL-A
      ========================== */
   .carousel-container {
-    background-color: #00cffe;
+    background-color: #F7F7F7;
     height: 510px;
     width: 100vw;
     position: relative;
@@ -108,14 +108,14 @@
     height: 8px;  /* Tamaño reducido de 10px a 8px */
     width: 8px;   /* Tamaño reducido de 10px a 8px */
     margin: 0 5px;
-    background-color: #fff;
+    background-color: #dddddd;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.3s;
   }
   
   .dot.active {
-    background-color: #B55FFF;
+    background-color: #F7F7F7;
   }
   
   /* ==========================
@@ -143,3 +143,144 @@
 .carousel-image.active {
   display: block; /* Solo mostramos la imagen activa */
 }
+
+/* REDES SOCIALES */
+.icon-container {
+  width: 100vw;
+  height: 55px;
+  background-color: #D9D9D9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.icon {
+  font-size: 30px;
+  color: #707070;
+  text-decoration: none;
+}
+/* FINAL REDES SOCIALES */
+/* INFO FOTOS CASACOR */
+.info-container {
+  width: 100vw; /* Mismo ancho que el carrusel */
+  height: 135px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.info-container p {
+  font-size: 10px;
+  color: #707070;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 2px 0;
+}
+/* FINAL INFO FOTOS CASACOR */
+/* IMÁGEN SECCIÓN 2 */
+.seccion2-img {
+  width: 100%; /* Mismo ancho que info-container */
+  height: auto; /* Escala proporcionalmente */
+  display: block; /* Evita espacios blancos debajo de la imagen */
+}
+/* FINAL IMÁGEN SECCIÓN 2 */
+
+/* IMAGEN SECCIÓN 3 */
+.section3-container {
+  width: 100vw; /* Igual que el ancho de los iconos sociales */
+  display: flex;
+  justify-content: center; /* Centra la imagen */
+}
+
+.section3-image {
+  width: 100%; /* La imagen ocupará el 100% del ancho de su contenedor */
+  height: auto; /* Escala la altura proporcionalmente */
+  object-fit: contain; /* Mantiene la proporción sin recortar */
+}
+/* FINAL IMAGEN SECCIÓN 3 */
+
+/* IMAGEN SECCIÓN 4 */
+.img-seccion4 {
+  width: 100%;
+  height: auto;
+}
+/* FINAL IMAGEN SECCIÓN 4 */
+
+/* IMAGEN TÍTULO MONOAMBIENTE */
+.monoambientes-container {
+  width: 100vw; /* Igual que el ancho de los iconos sociales */
+  display: flex;
+  justify-content: center; /* Centra la imagen */
+}
+
+.monoambientes-image {
+  width: 100%; /* La imagen ocupará el 100% del ancho de su contenedor */
+  height: auto; /* Escala la altura proporcionalmente */
+  object-fit: contain; /* Mantiene la proporción sin recortar */
+}
+/* FINAL IMAGEN TÍTULO MONOAMBIENTE */
+
+/* IMAGEN TÍTULO COCINAS */
+.cocinas-container {
+  width: 100vw; /* Igual que el ancho de los iconos sociales */
+  display: flex;
+  justify-content: center; /* Centra la imagen */
+}
+
+.cocinas-image {
+  width: 100%; /* La imagen ocupará el 100% del ancho de su contenedor */
+  height: auto; /* Escala la altura proporcionalmente */
+  object-fit: contain; /* Mantiene la proporción sin recortar */
+}
+/* FINAL IMAGEN TÍTULO COCINAS */
+
+/* IMAGEN TÍTULO CLOSETS */
+.closets-container {
+  width: 100vw; /* Igual que el ancho de los iconos sociales */
+  display: flex;
+  justify-content: center; /* Centra la imagen */
+}
+
+.closets-image {
+  width: 100%; /* La imagen ocupará el 100% del ancho de su contenedor */
+  height: auto; /* Escala la altura proporcionalmente */
+  object-fit: contain; /* Mantiene la proporción sin recortar */
+}
+/* FINAL IMAGEN TÍTULO CLOSETS */
+
+/* IMAGEN TÍTULO CONTACTO */
+.contacto-container {
+  width: 100vw; /* Igual que el ancho de los iconos sociales */
+  display: flex;
+  justify-content: center; /* Centra la imagen */
+}
+
+.contacto-image {
+  width: 100%; /* La imagen ocupará el 100% del ancho de su contenedor */
+  height: auto; /* Escala la altura proporcionalmente */
+  object-fit: contain; /* Mantiene la proporción sin recortar */
+}
+/* FINAL IMAGEN TÍTULO CONTACTO */
+
+/* IMAGEN TÍTULO COPYRIGHT */
+.copyright-container {
+  width: 100vw; /* Igual que el ancho de los iconos sociales */
+  display: flex;
+  justify-content: center; /* Centra la imagen */
+}
+
+.copyright-image {
+  width: 100%; /* La imagen ocupará el 100% del ancho de su contenedor */
+  height: auto; /* Escala la altura proporcionalmente */
+  object-fit: contain; /* Mantiene la proporción sin recortar */
+}
+/* FINAL IMAGEN TÍTULO COpyright */
+
+
+
+
+
+
