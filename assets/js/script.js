@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   portafolioBtn.addEventListener('click', function() {
-    scrollAndCloseMenu(6880); // Ir a la sección Portafolio
+    scrollAndCloseMenu(7080); // Ir a la sección Portafolio
   });
 
   contactoBtn.addEventListener('click', function() {
