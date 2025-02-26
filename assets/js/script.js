@@ -13,6 +13,39 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
+  // === SCROLL INSTANTÁNEO y CIERRE DEL MENÚ ===
+  const sobreMiBtn = document.getElementById('sobre-mi');
+  const educacionBtn = document.getElementById('educacion');
+  const experienciaBtn = document.getElementById('experiencia');
+  const portafolioBtn = document.getElementById('portafolio');
+  const contactoBtn = document.getElementById('contacto');
+
+  // Función para hacer scroll a las posiciones específicas y cerrar el menú
+  function scrollAndCloseMenu(scrollToPosition) {
+    window.scrollTo(0, scrollToPosition);
+    menu.style.display = "none"; // Cierra el menú después de hacer scroll
+  }
+
+  sobreMiBtn.addEventListener('click', function() {
+    scrollAndCloseMenu(0); // Ir al inicio de la página
+  });
+
+  educacionBtn.addEventListener('click', function() {
+    scrollAndCloseMenu(1370); // Ir a la sección Educación
+  });
+
+  experienciaBtn.addEventListener('click', function() {
+    scrollAndCloseMenu(2790); // Ir a la sección Experiencia
+  });
+
+  portafolioBtn.addEventListener('click', function() {
+    scrollAndCloseMenu(6880); // Ir a la sección Portafolio
+  });
+
+  contactoBtn.addEventListener('click', function() {
+    scrollAndCloseMenu(document.body.scrollHeight); // Ir al final de la página
+  });
+
   // === CARRUSELES ===
   function setupCarousel(carouselId, dotsId) {
     const carousel = document.getElementById(carouselId);
@@ -74,27 +107,4 @@ document.addEventListener("DOMContentLoaded", function() {
   setupCarousel("carouselB", "dotsB");
   setupCarousel("carouselC", "dotsC");
   setupCarousel("carouselD", "dotsD");
-
-  // === SCROLL INSTANTÁNEO ===
-  const sobreMiBtn = document.getElementById('sobre-mi');
-  const experienciaBtn = document.getElementById('experiencia');
-  const portafolioBtn = document.getElementById('portafolio');
-  const contactoBtn = document.getElementById('contacto');
-
-  // Función para hacer scroll a las posiciones específicas
-  sobreMiBtn.addEventListener('click', function() {
-    window.scrollTo(0, 0); // Ir al inicio de la página
-  });
-
-  experienciaBtn.addEventListener('click', function() {
-    window.scrollTo(0, 1490); // Ir a 2620px desde el borde superior
-  });
-
-  portafolioBtn.addEventListener('click', function() {
-    window.scrollTo(0, 5560); // Ir a 10150px desde el borde superior
-  });
-
-  contactoBtn.addEventListener('click', function() {
-    window.scrollTo(0, document.body.scrollHeight); // Ir al final de la página
-  });
 });
