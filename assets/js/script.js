@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   experienciaBtn.addEventListener('click', function() {
-    scrollAndCloseMenu(2790); // Ir a la sección Experiencia
+    scrollAndCloseMenu(2860); // Ir a la sección Experiencia
   });
 
   portafolioBtn.addEventListener('click', function() {
