@@ -108,3 +108,64 @@ document.addEventListener("DOMContentLoaded", function() {
   setupCarousel("carouselC", "dotsC");
   setupCarousel("carouselD", "dotsD");
 });
+
+
+
+
+
+
+
+
+  // CARRUSELES COMPUTADORA
+  document.addEventListener("DOMContentLoaded", function () {
+    // Función para inicializar cada carrusel
+    function initCarousel(carouselId) {
+        const images = document.querySelectorAll(`#${carouselId} .carousel-image-compu`);
+        const totalImages = images.length;
+        let currentIndex = 0;
+
+        // Mostrar la primera imagen
+        images[currentIndex].classList.add("active");
+
+        // Función para cambiar la imagen
+        function changeImage(direction) {
+            images[currentIndex].classList.remove("active");
+            
+            if (direction === "next") {
+                currentIndex = (currentIndex + 1) % totalImages;
+            } else {
+                currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            }
+
+            images[currentIndex].classList.add("active");
+        }
+
+        // Crear botones de navegación con Font Awesome
+        const leftArrow = document.createElement("button");
+        leftArrow.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
+        leftArrow.classList.add("carousel-arrow", "left");
+        leftArrow.addEventListener("click", () => changeImage("prev"));
+
+        const rightArrow = document.createElement("button");
+        rightArrow.innerHTML = '<i class="fa-solid fa-chevron-right"></i>';
+        rightArrow.classList.add("carousel-arrow", "right");
+        rightArrow.addEventListener("click", () => changeImage("next"));
+
+        // Agregar botones al contenedor del carrusel
+        const carouselContainer = document.querySelector(`#${carouselId}`).parentElement;
+        carouselContainer.appendChild(leftArrow);
+        carouselContainer.appendChild(rightArrow);
+    }
+
+    // Inicializa los cuatro carruseles
+    initCarousel("carouselA-compu");
+    initCarousel("carouselB-compu");
+    initCarousel("carouselC-compu");
+    initCarousel("carouselD-compu");
+});
+
+
+
+  // FINAL CARRUSELES COMPUTADORA
+
+
