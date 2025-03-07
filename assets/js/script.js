@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   educacionBtn.addEventListener('click', function() {
-    scrollAndCloseMenu(1270); // Ir a la sección Educación
+    scrollAndCloseMenu(1450); // Ir a la sección Educación
   });
 
   experienciaBtn.addEventListener('click', function() {
@@ -165,26 +165,4 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 // FINAL CARRUSELES COMPUTADORA
 
-document.addEventListener("DOMContentLoaded", function () {
-  const navItems = document.querySelectorAll(".nav-item");
-
-  navItems.forEach(item => {
-    item.addEventListener("click", function () {
-      const scrollTarget = this.getAttribute("data-scroll");
-
-      // Scroll automático según el target
-      if (scrollTarget === "inicio") {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      } else if (scrollTarget === "final") {
-        window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-      } else {
-        window.scrollTo({ top: parseInt(scrollTarget), behavior: "smooth" });
-      }
-
-      // Remover la clase 'active' de todos y agregarla al actual
-      navItems.forEach(nav => nav.classList.remove("active"));
-      this.classList.add("active");
-    });
-  });
-});
 
