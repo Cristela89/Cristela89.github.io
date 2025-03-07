@@ -35,11 +35,11 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   experienciaBtn.addEventListener('click', function() {
-    scrollAndCloseMenu(2730); // Ir a la sección Experiencia
+    scrollAndCloseMenu(2770); // Ir a la sección Experiencia
   });
 
   portafolioBtn.addEventListener('click', function() {
-    scrollAndCloseMenu(6670); // Ir a la sección Portafolio
+    scrollAndCloseMenu(6700); // Ir a la sección Portafolio
   });
 
   contactoBtn.addEventListener('click', function() {
