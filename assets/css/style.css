@@ -563,7 +563,7 @@
     .nav-computadora {
       width: 100%; /* Abarca todo el ancho de la pantalla */
       height: 70px;
-      background-color: #A5E26C;
+      background-color: #ffffff;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -580,9 +580,9 @@
   
     .nav-computadora ul li {
       font-family: 'Ubuntu', sans-serif;
-      font-weight: bold;
+      font-weight: medium;
       font-size: 20px;
-      color: black;
+      color: #555555;
       margin-right: 33px;
       cursor: pointer;
     }
@@ -599,7 +599,7 @@
   .icon-container-compu {
     width: 100vw;
     height: 70px;
-    background-color: #19c6e9;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -651,8 +651,8 @@
 /* CARRUSEL A */
 .carousel-container-compu {
   width: 100%;
-  height: 577px;
-  background-color: #00C38F;
+  height: 547px;
+  background-color: #F7F7F7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -663,7 +663,7 @@
 .carousel-compu {
   position: relative;
   width: 100%;
-  height: 577px;
+  height: 547px;
 }
 
 .carousel-image-compu {
@@ -688,7 +688,7 @@
   transform: translateY(-50%);
   background: none;
   border: none;
-  color: white;
+  color: #D0D0D0;
   font-size: 40px;
   cursor: pointer;
   z-index: 10;
