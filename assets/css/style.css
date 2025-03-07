@@ -571,13 +571,14 @@
       top: 0;
       z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
     }
+    
     .nav-computadora ul {
       display: flex;
       list-style: none;
       padding: 0;
       margin: 0;
     }
-  
+    
     .nav-computadora ul li {
       font-family: 'Ubuntu', sans-serif;
       font-weight: medium;
@@ -585,11 +586,18 @@
       color: #555555;
       margin-right: 33px;
       cursor: pointer;
+      transition: color 0.3s ease;
     }
-  
+    
     .nav-computadora ul li:last-child {
-      margin-right: 0; /* Elimina el margen derecho del último elemento */
+      margin-right: 0;
     }
+    
+    /* Estilo para la sección activa */
+    .nav-computadora ul li.active {
+      color: #949494;
+    }
+    
     .section1-img-compu {
       width: 100%;
       height: auto;

@@ -108,14 +108,14 @@ document.addEventListener("DOMContentLoaded", function() {
   setupCarousel("carouselC", "dotsC");
   setupCarousel("carouselD", "dotsD");
 });
+  // FINAL CELULAR
 
 
 
 
 
 
-
-
+  // COMIENZO VERSIÓN COMPUTADORA
   // CARRUSELES COMPUTADORA
   document.addEventListener("DOMContentLoaded", function () {
     // Función para inicializar cada carrusel
@@ -163,9 +163,28 @@ document.addEventListener("DOMContentLoaded", function() {
     initCarousel("carouselC-compu");
     initCarousel("carouselD-compu");
 });
+// FINAL CARRUSELES COMPUTADORA
 
+document.addEventListener("DOMContentLoaded", function () {
+  const navItems = document.querySelectorAll(".nav-item");
 
+  navItems.forEach(item => {
+    item.addEventListener("click", function () {
+      const scrollTarget = this.getAttribute("data-scroll");
 
-  // FINAL CARRUSELES COMPUTADORA
+      // Scroll automático según el target
+      if (scrollTarget === "inicio") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else if (scrollTarget === "final") {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+      } else {
+        window.scrollTo({ top: parseInt(scrollTarget), behavior: "smooth" });
+      }
 
+      // Remover la clase 'active' de todos y agregarla al actual
+      navItems.forEach(nav => nav.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
+});
 
