@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   educacionBtn.addEventListener('click', function() {
-    scrollAndCloseMenu(1450); // Ir a la sección Educación
+    scrollAndCloseMenu(1465); // Ir a la sección Educación
   });
 
   experienciaBtn.addEventListener('click', function() {
