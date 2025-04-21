@@ -247,6 +247,20 @@
     object-fit: contain; /* Mantiene la proporción sin recortar */
   }
   /* FINAL IMAGEN TÍTULO CLOSETS */
+
+    /* IMAGEN TÍTULO MIS RENDERS */
+    .mis-renders-container {
+      width: 100vw; /* Igual que el ancho de los iconos sociales */
+      display: flex;
+      justify-content: center; /* Centra la imagen */
+    }
+    
+    .mis-renders-image {
+      width: 100%; /* La imagen ocupará el 100% del ancho de su contenedor */
+      height: auto; /* Escala la altura proporcionalmente */
+      object-fit: contain; /* Mantiene la proporción sin recortar */
+    }
+    /* FINAL IMAGEN TÍTULO MIS RENDERS */
   
   /* IMAGEN TÍTULO CONTACTO */
   .contacto-container {
@@ -275,6 +289,8 @@
     object-fit: contain; /* Mantiene la proporción sin recortar */
   }
   /* FINAL IMAGEN TÍTULO COpyright */
+
+
   /* LO QUE NO DEBE APARECER EN LA VERSIÓN MOBILE */
   .header-image-compu {
     display: none;
@@ -324,6 +340,9 @@
       display: none;
     }
     .separador2-compu {
+      display: none;
+    }
+    .titulo-mis-renders {
       display: none;
     }
     .separador3-compu {
@@ -387,7 +406,8 @@
      INICIO BREAKPOINT PARA COMPUTADORA
      ========================== */
      @media screen and (min-width: 769px) {
-    /* LO QUE NO DEBE APARECER EN LA VERSIÓN COMPUTADORA */
+    
+      /* LO QUE NO DEBE APARECER EN LA VERSIÓN COMPUTADORA */
     .header-image, .section-image {
       display: none;
     }
@@ -527,6 +547,16 @@
     display: none;
   }
   /* FINAL IMAGEN TÍTULO CLOSETS */
+
+    /* IMAGEN TÍTULO MIS RENDERS */
+    .mis-renders-container {
+      display: none;
+    }
+    
+    .mis-renders-image {
+      display: none;
+    }
+    /* FINAL IMAGEN TÍTULO MIS RENDERS */
   
   /* IMAGEN TÍTULO CONTACTO */
   .contacto-container {
@@ -644,6 +674,10 @@
     width: 100%;
     height: auto;
   }
+  .titulo-mis-renders {
+    width: 100%;
+    height: auto;
+  }
   .separador3-compu {
     width: 100%;
     height: auto;
@@ -656,7 +690,7 @@
     width: 100%;
     height: auto;
   }
-/* CARRUSEL A */
+/* CARRUSEL */
 .carousel-container-compu {
   width: 100%;
   height: 537px;
@@ -680,7 +714,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: auto;
-  height: 577px;
+  height: 537px;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
@@ -714,7 +748,7 @@
 .carousel-arrow.right {
   right: 40px;
 }
-/* FINAL CARRUSEL A */  
+/* FINAL CARRUSEL  */  
 
 
     /* FINAL LO QUE SI DEBE APARECER EN LA VERSIÓN COMPUTADORA */

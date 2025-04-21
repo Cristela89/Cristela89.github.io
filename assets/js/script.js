@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const educacionBtn = document.getElementById('educacion');
   const experienciaBtn = document.getElementById('experiencia');
   const portafolioBtn = document.getElementById('portafolio');
+  const misRendersBtn = document.getElementById('mis-renders');
   const contactoBtn = document.getElementById('contacto');
 
   // Función para hacer scroll a las posiciones específicas y cerrar el menú
@@ -40,6 +41,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   portafolioBtn.addEventListener('click', function() {
     scrollAndCloseMenu(6755); // Ir a la sección Portafolio
+  });
+
+  misRendersBtn.addEventListener('click', function() {
+    scrollAndCloseMenu(7155); // Ir a la sección Portafolio
   });
 
   contactoBtn.addEventListener('click', function() {
@@ -107,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function() {
   setupCarousel("carouselB", "dotsB");
   setupCarousel("carouselC", "dotsC");
   setupCarousel("carouselD", "dotsD");
+  setupCarousel("carouselE", "dotsE");
 });
   // FINAL CELULAR
 
@@ -162,6 +168,7 @@ document.addEventListener("DOMContentLoaded", function() {
     initCarousel("carouselB-compu");
     initCarousel("carouselC-compu");
     initCarousel("carouselD-compu");
+    initCarousel("carouselE-compu");
 });
 // FINAL CARRUSELES COMPUTADORA
 
