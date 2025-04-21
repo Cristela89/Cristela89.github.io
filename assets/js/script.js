@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   misRendersBtn.addEventListener('click', function() {
-    scrollAndCloseMenu(8955); // Ir a la sección Portafolio
+    scrollAndCloseMenu(8655); // Ir a la sección Portafolio
   });
 
   contactoBtn.addEventListener('click', function() {
