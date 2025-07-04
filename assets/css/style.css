@@ -8,6 +8,125 @@
     font-family: Arial, sans-serif;
     line-height: 1.6;
   }
+
+    /* ==========================
+     INICIO BREAKPOINT PARA MOBILE
+     ========================== */
+  
+  /* Breakpoint para dispositivos pequeños */
+  @media screen and (max-width: 768px) {
+    .header-image, .section-image {
+      width: 100vw;
+    }
+
+/* LO QUE NO DEBE APARECER EN LA VERSIÓN MOBILE */
+
+  header.header {
+    display: none;
+  }
+  
+  .nav-buttons {
+  display: none;
+  }
+  
+  .nav-buttons button {
+  display: none;
+  }
+  
+  .nav-buttons button:hover {
+    display: none;
+  }
+  
+  .fondo-header {
+    display: none;
+  }
+  
+  .my-cv {
+    display: none;
+  }
+  
+  .gif-mario {
+    display: none;
+  }
+  
+  .tu-empresa {
+    display: none;
+  }
+  
+  .contacto {
+    display: none;
+  }
+  
+  .contacto h2 {
+   display: none;
+  }
+  
+  .contact-icons {
+    display: none;
+  }
+  
+  .contact-icons img {
+    display: none;
+  }
+  
+  /* Footer agregado */
+  .footer {
+    display: none;
+  }
+  
+  .footer p {
+    display: none;
+  }
+}
+
+/* FINAL LO QUE NO DEBE APARECER EN LA VERSIÓN MOBILE */    
+
+
+
+
+
+ /* LO QUE SI DEBE APARECER EN LA VERSIÓN MOBILE */
+
+/* FINAL LO QUE SI DEBE APARECER EN LA VERSIÓN MOBILE */   
+
+
+      /* ==========================
+     FINAL BREAKPOINT PARA MOBILE
+     ========================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ==========================
+     INICIO BREAKPOINT PARA COMPUTADORA
+     ========================== */
+     @media screen and (min-width: 769px) {
+    
+      /* LO QUE NO DEBE APARECER EN LA VERSIÓN COMPUTADORA */
+
+
+
+
+
+      /* FINAL LO QUE NO DEBE APARECER EN LA VERSIÓN COMPUTADORA */
+
+
+ 
+      
+      /* LO QUE SI DEBE APARECER EN LA VERSIÓN COMPUTADORA */
   
   header.header {
     width: 100%;
@@ -33,7 +152,7 @@
     color: #858585;
     cursor: pointer;
   }
-  
+  S
   .nav-buttons button:hover {
     color: #FFD667;
   }
@@ -117,14 +236,11 @@
     font-size: 16px;
     color: #636363;
   }
-  
-  /* Breakpoint para Android Compact (versión mobile) */
-  @media (max-width: 500px) {
-    /* Para mobile, removemos el posicionamiento fixed del header
-       para que la imagen (imagen_para_mobile) se incluya en el flujo
-       y permita hacer scroll en toda su vertical */
-    header.header {
-      position: relative;
-    }
-  }
-  
+}
+  /* FINAL LO QUE SI DEBE APARECER EN LA VERSIÓN COMPUTADORA */
+
+      /* ==========================
+FINAL BREAKPOINT PARA COMPUTADORA
+========================== */      
+
+

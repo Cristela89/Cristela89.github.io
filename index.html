@@ -15,7 +15,11 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <!------------------------------->
+  <!--INICIO VERSIÓN COMPUTADORA -->
+  <!------------------------------->  
   <header class="header">
+    <img src="assets/img/fondo_header.png" alt="Fondo del header" class="fondo-header">
     <div class="nav-buttons">
       <button id="home-btn">Home</button>
       <button id="sobre-mi-btn">Sobre mí</button>
@@ -24,11 +28,6 @@
       <button id="portafolio-btn">Portafolio</button>
       <button id="contacto-btn">Contacto</button>
     </div>
-    <!-- Se utiliza <picture> para mostrar una imagen distinta en mobile -->
-    <picture>
-      <source media="(max-width: 500px)" srcset="assets/img/imagen_para_mobile.png">
-      <img src="assets/img/fondo_header.png" alt="Fondo del header" class="fondo-header">
-    </picture>
   </header>
   
   <main>
@@ -57,49 +56,25 @@
   <footer class="footer">
     <p>&copy; 2025 - Cristela Martínez Ayala</p>
   </footer>
+  <!------------------------------->
+  <!--FINAL VERSIÓN COMPUTADORA -->
+  <!------------------------------->   
+  
+  
 
-  <script>
-    document.getElementById('home-btn').addEventListener('click', function () {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
 
-    document.getElementById('sobre-mi-btn').addEventListener('click', function () {
-      window.scrollTo({
-        top: 671,
-        behavior: 'smooth'
-      });
-    });
 
-    document.getElementById('educacion-btn').addEventListener('click', function () {
-      window.scrollTo({
-        top: 1940,
-        behavior: 'smooth'
-      });
-    });
 
-    document.getElementById('experiencia-btn').addEventListener('click', function () {
-      window.scrollTo({
-        top: 2547,
-        behavior: 'smooth'
-      });
-    });
+  <!------------------------------->
+  <!--INICIO VERSIÓN MOBILE -->
+  <!------------------------------->
 
-    document.getElementById('portafolio-btn').addEventListener('click', function () {
-      window.scrollTo({
-        top: 3627,
-        behavior: 'smooth'
-      });
-    });
+    <!------------------------------->
+  <!--FINAL VERSIÓN MOBILE -->
+  <!------------------------------->
 
-    document.getElementById('contacto-btn').addEventListener('click', function () {
-      window.scrollTo({
-        top: 13570,
-        behavior: 'smooth'
-      });
-    });
-  </script>
+
+  <script src="assets/js/script.js"></script>
+
 </body>
 </html>
